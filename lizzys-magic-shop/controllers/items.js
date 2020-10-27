@@ -11,17 +11,26 @@ const isAuthenticated = (req, res, next) => {
 }
 
 router.get('/new', (req, res) => {
-	res.render('shop/new.ejs', { currentUser: req.session.currentUser })
+	res.render('shop/new.ejs', { currentUser: req.session.currentUser }) //folder name
 })
 
 router.post('/', (req, res) => {
 	Items.create(req.body, (error, createdItem) => {
-		res.redirect('/shop')
+		res.redirect('/items') ///items? 
 	})
 	
 })
 
-router.get('/shop', (req, res) => {
+router.get('/', (req, res)=>{
+    Items.find({}, (error, allItems)=>{
+        res.render('shop/index.ejs', {
+            items: allItems,
+            currentUser: req.session.currentUser
+        })
+    })
+})
+
+router.get('/items', (req, res) => {
 	Items.create([
 	{
 		name: 'Disappearing Robe',
@@ -39,7 +48,7 @@ router.get('/shop', (req, res) => {
 
 
 		], (err, data) => {
-			res.redirect('/shop');
+			res.redirect('/items');
 		})
 });
 
