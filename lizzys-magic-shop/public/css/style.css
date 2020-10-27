@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Vampiro+One&display=swap');
+
+body {
+  background-image: url('https://store-images.s-microsoft.com/image/apps.26098.13766063483095614.7afc0816-3f5f-4ec9-82ea-773b2861f5ed.57daf585-9a0d-40ca-8cf5-5a6be22cb654?mode=scale&q=90&h=1080&w=1920');
+  text-align: center;
+
+
+}
+
+h1 {
+	color: silver;
+	font-family: 'Henny Penny', cursive;
+}
+
+p {
+	color: white;
+	font-size: 25px;
+	font-family: 'Vampiro One', cursive;
+}
+
+img {
+	border-radius: 15px;
+}
+
+.image-div {
+	text-align: center;
+	border-radius: 15px;
+}
+
+nav {
+	background-color: black;
+	opacity: .7;
+	font-size: 25px;
+	border-radius: 15px;
+	font-family: 'Henny Penny', cursive;
+
+}
