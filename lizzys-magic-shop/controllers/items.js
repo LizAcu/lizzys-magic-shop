@@ -2,13 +2,14 @@ const express = require('express')
 const router = express.Router()
 const Items = require('../models/items.js')
 const bodyParser = require('body-parser')
-// const isAuthenticated = (req, res, next) => {
-// 	if (req.session.currentUser) {
-// 		return next() 
-// 	} else {
-// 		res.resdirect('/sessions/new')
-// 	}
-// }
+
+const isAuthenticated = (req, res, next) => {
+	if (req.session.currentUser) {
+		return next() 
+	} else {
+		res.resdirect('/sessions/new')
+	}
+}
 
 router.get('/new', (req, res) => {
 	res.render('shop/new.ejs', { currentUser: req.session.currentUser }) //folder name
@@ -69,7 +70,7 @@ router.get('/:id/edit', (req, res) => {
 
 
 
-router.put('/:id', (req, res) => {
+router.put('/:id', isAuthenticated, (req, res) => {
 
  
   Items.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
@@ -77,7 +78,7 @@ router.put('/:id', (req, res) => {
   })
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', isAuthenticated, (req, res) => {
   Items.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect('/items')
   })

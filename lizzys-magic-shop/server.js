@@ -40,6 +40,12 @@ mongoose.connection.once('open', () => {
 const itemsController = require('./controllers/items.js')
 app.use('/items', itemsController)
 
+const usersController = require('./controllers/users.js')
+app.use('/users', usersController)
+
+const sessionsController = require('./controllers/sessions.js')
+app.use('/sessions', sessionsController)
+
 app.get('/', (req, res) => {
 	res.render('home.ejs', { currentUser: req.session.currentUser })
 })
