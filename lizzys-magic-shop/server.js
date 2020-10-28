@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 require('dotenv').config()
 
 const app = express()
@@ -12,7 +13,7 @@ const mongodbURI = process.env.MONGODBURI
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'))
-
+app.use(methodOverride('_method'))
 
 // app.get('/', (req, res) => {
 
