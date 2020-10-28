@@ -59,20 +59,18 @@ router.get('/items', (req, res) => {
 
 
 router.get('/:id/edit', (req, res) => {
-  Fruit.findById(req.params.id, (err, foundFruit) => {
-    res.render('items/edit.ejs', {
-      item: foundItem,
+  Items.findById(req.params.id, (err, foundItem) => {
+    res.render('shop/edit.ejs', {
+      items: foundItem,
       currentUser: req.session.currentUser
     })
   })
 })
 
+
+
 router.put('/:id', (req, res) => {
-	if (req.body.getUpdates === 'on') {
-    req.body.getUpdates = true
-  } else {
-    req.body.getUpdates = false
-  }
+
  
   Items.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
     res.redirect('/items')
