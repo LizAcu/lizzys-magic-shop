@@ -30,7 +30,7 @@ app.use(
 
 
 //mongoose connection
-mongoose.connect(mongodbURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect(mongodbURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
 mongoose.connection.once('open', () => {
 	console.log('connected to mongo')
 })
