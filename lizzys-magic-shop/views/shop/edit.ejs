@@ -1,0 +1,14 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+        <h1>Edit Items Page</h1>
+        <form action="/items/<%=item.id%>?_method=PUT" method="POST">
+         
+            Name: <input type="text" name="name" value="<%=item.name%>"/><br/>
+            Color: <input type="text" name="color" value="<%=item.color%>"/><br/>
+        
+            <br/>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+
+<%- include('../partials/footer.ejs') %>
