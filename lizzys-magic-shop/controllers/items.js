@@ -15,7 +15,11 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+	console.log(req.body)
 	Items.create(req.body, (error, createdItem) => {
+		if (error) {
+			console.log(error)
+		}
 		res.redirect('/items') ///items? 
 	})
 	
