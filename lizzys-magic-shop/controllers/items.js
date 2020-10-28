@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Items = require('../models/items.js')
-
+const bodyParser = require('body-parser')
 const isAuthenticated = (req, res, next) => {
 	if (req.session.currentUser) {
 		return next() 
@@ -42,15 +42,18 @@ router.get('/items', (req, res) => {
 		color: 'wood',
 		description: 'Can make lots of things happen.'
 	}
-	// {},
+	
 
 
 
 
-		], (err, data) => {
-			res.redirect('/items');
-		})
+	], (err, data) => {
+		console.log(Items)
+		res.redirect('/items');
+	})
 });
+
+
 
 // router.get('/seed')
 

@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const session = require('express-session')
+const bodyParser = require('body-parser')
 require('dotenv').config()
 
 const app = express()
@@ -37,7 +38,6 @@ mongoose.connection.once('open', () => {
 
 const itemsController = require('./controllers/items.js')
 app.use('/items', itemsController)
-
 
 app.get('/', (req, res) => {
 	res.render('home.ejs', { currentUser: req.session.currentUser })
