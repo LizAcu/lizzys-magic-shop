@@ -65,7 +65,7 @@ router.get('/items', (req, res) => {
 	{
 		name: 'Galaxy in a jar',
 		color: 'starry',
-		description: 'diving in and exploring the this tiny galaxy, yes, you CAN jump in!',
+		description: 'diving in and exploring this tiny galaxy, yes, you CAN jump in!',
 		image: 'https://storage.googleapis.com/little-passports-blog/hubble_friday_08072015.jpg'
 	}
 	
