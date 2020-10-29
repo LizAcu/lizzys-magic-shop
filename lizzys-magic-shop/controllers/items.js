@@ -5,9 +5,9 @@ const bodyParser = require('body-parser')
 
 const isAuthenticated = (req, res, next) => {
 	if (req.session.currentUser) {
-		return next() 
+		return next()
 	} else {
-		res.resdirect('/sessions/new')
+		res.redirect('/sessions/new')
 	}
 }
 
@@ -70,7 +70,7 @@ router.get('/:id/edit', (req, res) => {
 
 
 
-router.put('/:id', isAuthenticated, (req, res) => {
+router.put('/:id', isAuthenticated, (req, res) => { //isAuthenticated,
 
  
   Items.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
