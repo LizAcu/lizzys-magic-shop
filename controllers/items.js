@@ -40,12 +40,21 @@ router.get('/items', (req, res) => {
 	{
 		name: 'Disappearing Robe',
 		color: 'red',
-		description: 'Makes you go poof!'
+		description: 'Makes you go poof!',
+		image: 'https://www.picclickimg.com/d/l400/pict/223552126732_/Black-Hooded-Velvet-Wizard-Cloak-Cape-Men-Halloween-With.jpg'
 	},
 	{
 		name: 'Magic Staff',
 		color: 'wood',
-		description: 'Can make lots of things happen.'
+		description: 'Can make lots of things happen.',
+		image: 'https://i.pinimg.com/originals/9a/04/a8/9a04a8ad79de4ad75ccfe0976d8106fc.jpg'
+
+	},
+	{
+		name: 'Magic Hat',
+		color: 'no color',
+		description: 'pulling out desserts like you would a rabbit!',
+		image: 'https://www.laphamsquarterly.org/sites/default/files/images/roundtable/hatmain_0.jpg'
 	}
 	
 
