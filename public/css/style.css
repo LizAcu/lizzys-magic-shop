@@ -49,8 +49,30 @@ nav {
 	opacity: .8;
 }
 
+.description-para {
+	font-family: 'Henny Penny', cursive;;
+}
+
 .hatman {
 	width: 300px;
 	height: 350px;
+	border: 10px solid black;
 }
+
+.welcome {
+	background: url('https://thumbs.dreamstime.com/b/vector-illustration-sacred-mystic-symbol-against-space-background-galaxy-stars-vector-illustration-sacred-133901871.jpg');
+	border-radius: 15px;
+	text-align: center;
+
+}
+
+.items-header {
+	border-radius: 15px;
+	color: white;
+	background: url('https://thumbs.dreamstime.com/b/vector-illustration-sacred-mystic-symbol-against-space-background-galaxy-stars-vector-illustration-sacred-133901871.jpg')
+
+	
+
+}
+
 
