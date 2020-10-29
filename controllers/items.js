@@ -40,13 +40,13 @@ router.get('/items', (req, res) => {
 	{
 		name: 'Disappearing Robe',
 		color: 'red',
-		description: 'Makes you go poof!',
+		description: 'making you go poof!',
 		image: 'https://www.picclickimg.com/d/l400/pict/223552126732_/Black-Hooded-Velvet-Wizard-Cloak-Cape-Men-Halloween-With.jpg'
 	},
 	{
 		name: 'Magic Staff',
-		color: 'wood',
-		description: 'Can make lots of things happen.',
+		color: 'wooden',
+		description: 'making lots of things happen.',
 		image: 'https://i.pinimg.com/originals/9a/04/a8/9a04a8ad79de4ad75ccfe0976d8106fc.jpg'
 
 	},
@@ -55,6 +55,12 @@ router.get('/items', (req, res) => {
 		color: 'no color',
 		description: 'pulling out desserts like you would a rabbit!',
 		image: 'https://www.laphamsquarterly.org/sites/default/files/images/roundtable/hatmain_0.jpg'
+	},
+	{
+		name: 'Spicy runes',
+		color: 'wooden', 
+		description: 'alphabetizing your life',
+		image: 'https://i.pinimg.com/originals/a4/64/b3/a464b3acca99b7bb5b000a0aab4475de.jpg'
 	}
 	
 
